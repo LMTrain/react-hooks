@@ -79,12 +79,12 @@ const App = () => {
             <img
                 src={
                     isOn 
-                    ? 'https://icon.now.sh/highlight/fd0'
-                    : 'https://icon.now.sh/highlight/aaa'
+                    ? 'https://lmtrain.github.io/lm-images/assets/images/futurecar9.jpg'
+                    : 'https://lmtrain.github.io/lm-images/assets/images/futurecar17.jpg'
                 }
                 style={{
-                height: '50px',
-                width: '50px',
+                height: '150px',
+                width: '250px',
                 }}
                 alt="Flashlight"
                 onClick={toggleLight}
