@@ -83,8 +83,8 @@ const App = () => {
                     : 'https://lmtrain.github.io/lm-images/assets/images/futurecar17.jpg'
                 }
                 style={{
-                height: '150px',
-                width: '250px',
+                height: '500px',
+                width: '650px',
                 }}
                 alt="Flashlight"
                 onClick={toggleLight}
