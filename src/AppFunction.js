@@ -19,7 +19,7 @@ const App = () => {
     useEffect(
         () => {
 
-            document.title = `You have clicked ${count} times`;
+            document.title = `You have clicked this ${count} times`;
             window.addEventListener('mousemove', handleMouseMove);
             window.addEventListener('online', handleOnline);
             window.addEventListener('offline', handleOffline);
