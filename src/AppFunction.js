@@ -161,7 +161,7 @@ const App = () => {
             <h2>Geolocation</h2>
             <p>Latitude is {latitude}</p>
             <p>Longitude is {longitude}</p>
-            <p>Your speed is not {speed ? speed : "0"}</p>
+            <p>Your speed is {speed ? speed : "0"}</p>
         </>
     );
         
