@@ -52,8 +52,8 @@ class App extends Component {
         <h2>Toggle Light</h2>
           <div
             style={{
-              height: '50px',
-              width: '50px',
+              height: '500px',
+              width: '500px',
               background: this.state.isOn ? 'yellow' : 'grey'
             }}
             onClick={this.toggleLight}

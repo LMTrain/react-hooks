@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-
+import Cars from "./Cars.json";
 
 const initialLocationState = {
     latitude: null,
@@ -14,12 +14,45 @@ const App = () => {
     const [mousePosition, setMousePosition] = useState({x: null, y: null})
     const [status, setStatus] = useState(navigator.onLine);
     const [{latitude, longitude, speed}, setLocation] = useState(initialLocationState);
+    
     let mounted = true;
+    let car1 = ["https://lmtrain.github.io/lm-images/assets/images/bugatti_1.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/bugatti_2.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/futurecar7.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/bugattinoire.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/bugatti_5.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/ferrari_1.jpg",      
+            "https://lmtrain.github.io/lm-images/assets/images/ferrari_2.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/ferrari_3.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/futurecar17.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/lambo_2.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/futurecar11.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/futurecar2.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/bugatti_3.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/bugatti_4.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/lambo_1.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/bmw_1.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/bmw_2.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/futurecar1.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/futurecar3.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/futurecar4.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/futurecar5.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/futurecar6.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/futurecar8.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/futurecar9.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/futurecar9.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/futurecar18.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/futurecar20.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/mydejavuredcar2.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/bugatti_chiron%20sport_2.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/mybmwm6.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/futurecar14.jpg",
+        ];
 
     useEffect(
         () => {
 
-            document.title = `You have clicked ${count} times`;
+            document.title = `You have clicked this ${count} times`;
             window.addEventListener('mousemove', handleMouseMove);
             window.addEventListener('online', handleOnline);
             window.addEventListener('offline', handleOffline);
@@ -63,31 +96,57 @@ const App = () => {
     }
 
     const incrementCount = () => {
-        setCount(prevCount => prevCount + 1 )
+        if (count !== 30) {
+            setCount(prevCount => prevCount + 1 )
+        }
+        else
+        setCount(0)
+       
     };
 
     const toggleLight = () => {
         setIsOn(prevIsOn => !prevIsOn)
+        
+        
     }
 
     return (
         <>
-            <h2>Counter</h2>
-            <button onClick={incrementCount}>I was clicked {count} times</button>
-
-            <h2>Toggle Lights</h2>
+                <h2>Available Cars</h2>
+            <div>
+                <button onClick={incrementCount}>Click to see Car {count} </button>
+            </div>
+                <img
+                src={
+                    car1[count]
+                    
+                }
+                style={{
+                height: '500px',
+                width: '750px',
+                }}
+                alt="Flashlight"
+                
+            />
+            
+      
+            <div>
+                <br></br>
+                <button onClick={toggleLight}> Click to change car</button>
+            </div>
+            
             <img
                 src={
                     isOn 
-                    ? 'https://lmtrain.github.io/lm-images/assets/images/futurecar9.jpg'
-                    : 'https://lmtrain.github.io/lm-images/assets/images/futurecar17.jpg'
+                    ? car1[count -1]
+                    : car1[count +3]
                 }
                 style={{
-                height: '150px',
-                width: '250px',
+                height: '500px',
+                width: '750px',
                 }}
-                alt="Flashlight"
-                onClick={toggleLight}
+                alt="Click 1st button at the top to change and see a new car"
+                
             />
 
             <h2>Mouse Position</h2>
