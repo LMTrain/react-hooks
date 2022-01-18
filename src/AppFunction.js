@@ -47,6 +47,7 @@ const App = () => {
             "https://lmtrain.github.io/lm-images/assets/images/bugatti_chiron%20sport_2.jpg",
             "https://lmtrain.github.io/lm-images/assets/images/mybmwm6.jpg",
             "https://lmtrain.github.io/lm-images/assets/images/futurecar14.jpg",
+            "https://lmtrain.github.io/lm-images/assets/images/ls_field-cnn.jpg",
         ];
 
     useEffect(
