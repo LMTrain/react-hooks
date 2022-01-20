@@ -120,7 +120,7 @@ const App = () => {
 
     return (
         <>
-                <h2>Available Cars</h2>
+                <h2>Images of Cars of The Future</h2>
             <div>
                 <button onClick={incrementCount}>{"Forward >>>"} {count} </button>
             </div>
