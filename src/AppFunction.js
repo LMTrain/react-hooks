@@ -157,7 +157,7 @@ const App = () => {
                 
             />
 
-            <h2>Mouse Position</h2>
+            <h2>On Screen Mouse Position</h2>
             {JSON.stringify(mousePosition, null, 2)}
             <br />
 
