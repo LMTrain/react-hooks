@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 
     const App = (props) => {
-        const {title, body} = props
+        //const {title, body} = props
         const [toggled, setToggled] = useState(false);
         
         const handleToggleBody  = () => {
