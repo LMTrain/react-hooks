@@ -73,7 +73,13 @@
       "name": "Future Car-2",
       "image": "https://lmtrain.github.io/lm-images/assets/images/futurecar2.jpg"
       
-    }
+    },
+    {
+      "id": 13,
+      "name": "Bugatti-2",
+      "image":
+        "https://lmtrain.github.io/lm-images/assets/images/bugatti_2.jpg"
+    } 
     
   ]
   
